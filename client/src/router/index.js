@@ -3,6 +3,7 @@ import Home from "../components/Home.vue"
 import Create from "../components/Create.vue"
 import Send from "../components/Send.vue"
 import Read from "../components/Read.vue"
+import Preview from "../components/Preview.vue"
 
 const routes = [
   {
@@ -25,6 +26,11 @@ const routes = [
     name: "Read",
     component: Read
   },
+  {
+      path: "/preview",
+      name: "preview",
+      component: Preview
+  }
 ]
 
 const router = createRouter({
