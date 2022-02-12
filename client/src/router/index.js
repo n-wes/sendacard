@@ -1,0 +1,35 @@
+import { createWebHistory, createRouter } from "vue-router"
+import Home from "../components/Home.vue"
+import Create from "../components/Create.vue"
+import Send from "../components/Send.vue"
+import Read from "../components/Read.vue"
+
+const routes = [
+  {
+    path: "/",
+    name: "Home",
+    component: Home,
+  },
+  {
+    path: "/create",
+    name: "Create",
+    component: Create
+  },
+  {
+    path: "/send",
+    name: "Send",
+    component: Send
+  },
+  {
+    path: "/read",
+    name: "Read",
+    component: Read
+  },
+]
+
+const router = createRouter({
+  history: createWebHistory(),
+  routes,
+})
+
+export default router;
