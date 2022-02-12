@@ -1,6 +1,9 @@
 <template>
   <div class = "home-page">
-    
+
+    <h3 class = "template">
+    Welcome to the LOVE CARD 
+    </h3>
       <router-link class= "absolute-center create-card" to="/create">
          <button type = "button"> 
             Create a Card
@@ -21,6 +24,18 @@ export default {
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped>
+
+  .template {
+    display: block;
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 2em;
+    color:azure;
+    margin-block-start: 0em;
+    margin-block-end: 0em;
+    margin-inline-start: 0px;
+    margin-inline-end: 0px;
+    font-weight: bold;
+  }
 
   .home-page{
     position: relative;
