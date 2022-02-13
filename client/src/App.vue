@@ -15,6 +15,7 @@ export default {
 <style>
 @import url('https://fonts.googleapis.com/css2?family=Pacifico&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Cherry+Swash&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Caveat&display=swap');
 
 @font-face {
   font-family: 'Dream Avenue';
