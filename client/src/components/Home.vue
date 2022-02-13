@@ -5,12 +5,11 @@
     Welcome to the LOVE CARD 
     </h3>
       <router-link class= "absolute-center create-card" to="/create">
-         <button type = "button"> 
-            Create a Card
-        </button>    
+         Create Card <br>
+         click me 
       </router-link>
 
-    <img class="background" src="../assets/neon_heart.gif" alt="Neon Heart Gif">
+    <img class="background" src="../assets/red_heart.png" alt="Neon Heart Gif">
         
     <router-view></router-view>
   </div>
@@ -27,9 +26,8 @@ export default {
 
   .template {
     display: block;
-    font-family: 'Times New Roman', Times, serif;
     font-size: 2em;
-    color:azure;
+    color:black;
     margin-block-start: 0em;
     margin-block-end: 0em;
     margin-inline-start: 0px;
@@ -44,6 +42,10 @@ export default {
 
   .create-card {
     margin: 0;
+    font-size: 4rem;
+    font-family: 'Times New Roman', Times, serif;
+    text-decoration: none;
+    color: white;
     position: absolute;
     top: 50%;
     left: 50%;
@@ -54,8 +56,6 @@ export default {
   .background{
     position: absolute;
     z-index: -1;
-    width: 100%;
-    height: 100%;
     top: 50%;
     left: 50%;
     -ms-transform: translate(-50%, -50%);
