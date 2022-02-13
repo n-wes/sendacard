@@ -54,8 +54,6 @@ export default {
     return {
       // Set by form fields.
       cardType: "v-1",
-      to: "",
-      from: "",
       front: "",
       main: "",
       back: "",
