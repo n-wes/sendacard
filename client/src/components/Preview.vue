@@ -1,11 +1,14 @@
 <template>
     <div class="fixed-center">
         <q-card 
-            class="card" flat>
+            id='front'
+            class="card"
+            flat
+        >
             <q-card-section horizontal>
                 <q-img
                     src="../assets/front_1.png"
-                    class='letter-img'
+                    class='page-dimensions'
                 >
                     <div 
                         class="front-message absolute-center"
@@ -18,6 +21,19 @@
                 <q-card-actions vertical class="no-pad-full-width justify-around q-px-md">
                     <q-btn flat class="btn"><q-icon name="navigate_next" /></q-btn>
                 </q-card-actions>
+            </q-card-section>
+        </q-card>
+        <q-card 
+            id='body'
+            class="card"
+            flat
+        >
+            <q-card-section horizontal>
+                <div
+                    class="page-dimensions"
+                    :class="(cardType || 'v-1') + '-background-color'"
+                >
+                </div>
             </q-card-section>
         </q-card>
     </div>
@@ -41,7 +57,7 @@ export default {
 .card {
     width: 43.5rem;
 }
-.letter-img{
+.page-dimensions {
     height: 50rem;
     width: 37.5rem;
 }
@@ -63,5 +79,9 @@ export default {
     top: 85%;
     color: #000;
     font-size: 2rem;
+}
+
+.v-1-background-color {
+    background: #ECE6DB;
 }
 </style>
