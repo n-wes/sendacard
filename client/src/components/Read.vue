@@ -1,6 +1,6 @@
 <template>
   <div>
-    <Preview :cardType="v-1" :frontMsg="this.front" :mainMsg="this.main" :backMsg="this.back"></Preview> 
+    <Preview :cardType="type" :frontMsg="front" :mainMsg="main" :backMsg="back"></Preview> 
   </div>
 </template>
 
@@ -18,21 +18,12 @@ export default {
     }
   },
   setup() {
-
       const route = useRoute()
-
-      console.log(route);
-
-      // this.urlArgs = {
-      //   type: this.$route.query.type,
-      //   front: this.$route.query.front,
-      //   main: this.$route.query.main,
-      //   back: this.$route.query.back
-      // }
-
-      // this.urlArgs.front = this.urlArgs.front.replace(/`/g, " ");
-      // this.urlArgs.main = this.urlArgs.main.replace(/`/g, " ");
-      // this.urlArgs.back = this.urlArgs.back.replace(/`/g, " ");
+      const type = route.query.type
+      const front = route.query.front.replace(/`/g, " ")
+      const main = route.query.main.replace(/`/g, " ")
+      const back = route.query.back.replace(/`/g, " ")
+      return { type, front, main, back }
   },
   props: ['messageString']
 }
