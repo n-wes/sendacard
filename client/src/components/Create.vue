@@ -10,7 +10,7 @@
             <q-avatar>
               <img src="https://cdn.quasar.dev/logo-v2/svg/logo-mono-white.svg">
             </q-avatar>
-            Title
+            Send-A-Card
           </q-toolbar-title>
         </q-toolbar>
       </q-header>
@@ -39,12 +39,14 @@
         <q-label for="create-message">Back</q-label>
         <q-input outlined class="q-my-xs q-mx-sm lower-height" v-model="back"
                 type="textarea" id="create-message" name="name" required
-                minlength="4" maxlength="250" rows="5" size="10"></q-input>
+                minlength="4" maxlength="20" rows="5" size="10"></q-input>
 
-        <q-btn type="button" @mouseover="buildURL" @click="buildURL" class="q-my-lg"> -->
+        <q-btn type="button" @mouseover="buildURL" @click="buildURL" class="q-my-lg">
           <!-- <router-link :to="{name: 'Send', params: {url: this.urlExtension}}"> -->
+          <!-- <router-link to="/send"> -->
+          <router-link :to="`/send`+this.urlExtension">          
             Generate
-          <!-- </router-link> -->
+          </router-link>
         </q-btn>
       </q-drawer>
 

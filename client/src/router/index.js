@@ -17,7 +17,7 @@ const routes = [
     component: Create
   },
   {
-    path: "/send/:url",
+    path: "/send",
     name: "Send",
     component: Send
   },
