@@ -14,6 +14,22 @@ export default {
 
 <style>
 @import url('https://fonts.googleapis.com/css2?family=Pacifico&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Cherry+Swash&display=swap');
+
+@font-face {
+  font-family: 'Dream Avenue';
+  src: url(fonts/DreamAvenue.ttf);
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Halimun';
+  src: url(fonts/Halimun.ttf);
+  font-weight: normal;
+  font-style: normal;
+}
+
 #app {
   font-family: 'Pacifico', cursive;
   -webkit-font-smoothing: antialiased;
