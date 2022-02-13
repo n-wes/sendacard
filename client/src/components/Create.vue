@@ -53,7 +53,13 @@ export default {
   data() {
     return {
       // Set by form fields.
+<<<<<<< HEAD
       cardType: "",
+=======
+      cardType: "v-1",
+      to: "",
+      from: "",
+>>>>>>> b1b57e37defa0f4061ab8a9d44e040d4bce786ec
       front: "",
       main: "",
       back: "",
@@ -67,7 +73,7 @@ export default {
     buildURL() {
       this.urlExtension = "?type=" + this.cardType + "&front=";
       this.urlExtension += this.front + "&main=" + this.main + "&back=" + this.back;
-      this.urlExtension = this.urlExtension.replace(/ /g, "+");
+      this.urlExtension = this.urlExtension.replace(/ /g, "`");
 
       console.log(this.urlExtension); // For debugging message string.
     }
