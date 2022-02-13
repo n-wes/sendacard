@@ -5,7 +5,6 @@
 
       <q-header elevated class="bg-primary text-white">
         <q-toolbar>
-          <q-btn dense flat round icon="menu" @click="toggleLeftDrawer" />
 
           <q-toolbar-title>
             <q-avatar>
@@ -72,6 +71,7 @@ export default {
   // Methods are functions that mutate state and trigger updates.
   // They can be bound as event listeners in templates.
   methods: {
+    
   },
 
   // Lifecycle hooks are called at different stages
