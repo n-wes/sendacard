@@ -18,7 +18,8 @@ export default {
     return{
       title: 'Send'
     }
-  }
+  },
+  props: ['messageString']
 }
 </script>
 

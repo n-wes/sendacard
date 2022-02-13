@@ -41,11 +41,16 @@
                 type="textarea" id="create-message" name="name" required
                 minlength="4" maxlength="250" rows="5" size="10"></q-input>
 
-        <q-btn type="button" class="q-my-lg">Generate</q-btn>
+        <q-btn type="button" @mouseover="buildURL" @click="buildURL" class="q-my-lg"> -->
+          <!-- <router-link :to="{name: 'Send', params: {url: this.urlExtension}}"> -->
+            Generate
+          <!-- </router-link> -->
+        </q-btn>
       </q-drawer>
 
       <q-page-container>
-        <router-view />
+        <!-- <router-view /> -->
+        <Preview cardType="v-1" :frontMsg="this.front" :mainMsg="this.main" :backMsg="this.back"></Preview>
       </q-page-container>
         
     </q-layout>
@@ -53,25 +58,38 @@
 </template>
 
 <script>
+import Preview from "./Preview.vue";
+
 export default {
   name: 'Create',
+  components: {
+    Preview
+  },
   // Properties returned from data() becomes reactive state
   // and will be exposed on `this`.
   data() {
     return {
       // Set by form fields.
+      cardType: "",
       to: "",
       from: "",
       front: "",
       main: "",
       back: "",
+      urlExtension: ""
     }
   },
 
   // Methods are functions that mutate state and trigger updates.
   // They can be bound as event listeners in templates.
   methods: {
-    
+    buildURL() {
+      this.urlExtension = "?type=" + this.cardType + "&from=" + this.from + "&to=" + this.to + "&front=";
+      this.urlExtension += this.front + "&main=" + this.main + "&back=" + this.back;
+      this.urlExtension = this.urlExtension.replace(/ /g, "+");
+
+      console.log(this.urlExtension); // For debugging message string.
+    }
   },
 
   // Lifecycle hooks are called at different stages
@@ -81,3 +99,9 @@ export default {
   }
 }
 </script>
+
+<style scoped>
+.no-line {
+  text-decoration: none;
+}
+</style>
